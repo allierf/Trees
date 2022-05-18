@@ -1,0 +1,17 @@
+Q3.A
+          3
+         / \
+        1   9
+       / \
+      2   4
+    /      \
+   3        5
+ /           \
+8             9
+The diameter would be 6.
+
+Q3.B
+My approach to this problem was to build off the problem we did in class where we found the height of the tree. So to start I created a helper function to update a variable created in the original function called diameter. I pass diameter by reference to the helper function. Then the base case of the helper function checks whether the root equals a nullptr. Then I recursively call the left root and set it equal to the left variable and I recursively call the right root and set that equal to the right variable. The left and right variables keep track of the height for their subtree as well as the calculated max diameter. The max diameter is found by taking the max of the current max diameter and left + right. So basically the left subtree will have its max diameter  W.L.G of the right subtree. This allows for consideration of the  paths that do not go through the root node. Finally, the max of the two subtree diameters will be returned.
+
+Q3.C
+The worst-case time complexity would be O(n) where n is the number of nodes in the tree. Every node has to be checked to find the max height of the tree and every node is recursively called. This leads to a space complexity of O(n) as well because the recursive stack will be equal to the number of nodes on the tree

@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/51111109/c-tree-data-structure
+Gozie and Nick helped for the addWord function
